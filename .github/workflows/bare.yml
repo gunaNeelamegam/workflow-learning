@@ -24,4 +24,4 @@ jobs:
     needs: test
     steps:
       - name: Build Environment
-      - run: echo "Building Source"
+        run: echo "Building Source"
