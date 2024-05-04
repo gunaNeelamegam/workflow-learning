@@ -1,0 +1,27 @@
+name: Bare Actions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Environment
+        uses: actions/checkout@v2
+      - name: testing
+        run: echo "Testing ...."
+      - name: complete test
+        run : |
+          sleep 10
+          echo "Completed Test"
+        
+      
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Build Environment
+      - run: echo "Building Source"
