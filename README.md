@@ -1,5 +1,6 @@
 # Github Action's
 
+[![Learning Action's](https://github.com/gunaNeelamegam/workflow-learning/actions/workflows/bare.yml/badge.svg)](https://github.com/gunaNeelamegam/workflow-learning/actions/workflows/bare.yml)
 ## Topic's
 
 * GitHub Cli (gh)
