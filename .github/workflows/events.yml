@@ -1,0 +1,26 @@
+name: Events
+
+on:
+    push:
+        branches:
+            - main
+            - master
+    pull_request:
+        branches:
+            - main
+            - master
+
+jobs:
+    
+    PushEvent:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "main and master push event"
+              run: echo "this is push event"
+
+    PullRequest:
+        if: ${{github.event_name == 'pull_request'}}
+        runs-on: ubuntu-latest
+        steps:
+            - name:  Testing Pull Request Event
+              run: echo "This is Pull Request"
