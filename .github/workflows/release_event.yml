@@ -1,0 +1,12 @@
+name: releaseEvent
+
+on:
+    release:
+        types: [published]
+
+jobs:
+    release_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: deployment_is_going_on
+              run: echo "RELEASING ..."

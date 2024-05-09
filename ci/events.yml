@@ -28,3 +28,10 @@ jobs:
         steps:
             - name:  Testing Pull Request Event
               run: echo "This is Pull Request"
+    
+    Release_Request:
+    if: ${{github.event_name == "release"}}
+    runs-on: ubuntu-latest
+    steps:
+        - name: This is Release
+          run: echo "Release is Done Successfully"
