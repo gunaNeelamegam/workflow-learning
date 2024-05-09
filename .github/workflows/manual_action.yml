@@ -1,0 +1,21 @@
+name: manual action trigger
+
+on:
+    workflow_dispatch: # mean's the manual trigger only job may executes
+    # push: 
+    #     branches-ignore: 
+    #         - gh-pages
+    #         # - any
+    #     branches:
+    #         - main
+
+jobs:
+    manual_triggers:
+        runs-on: ubuntu-latest
+        steps:
+            - name: This is manual Trigger Job
+              run: echo "Hello from manual trigger Job"
+            
+
+
+    
