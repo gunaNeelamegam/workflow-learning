@@ -1,0 +1,45 @@
+name: Working with Github Action's
+
+on: [push]
+
+# global env;s
+env:
+    NAME: GUNA
+    AGE: 20
+
+jobs:
+    enviroment_practice:
+        # each job can have the env
+        environment: release
+        runs-on: ubuntu-latest
+        env:
+            USERNAME: "${{secrets.USERNAME}}"
+        steps:
+            - name: show all env's
+              run: |
+                 echo printenv
+                 echo "*********"
+                 echo '$USERNAME'
+
+    build-dev-env:
+        runs-on: ubuntu-latest
+        environment: development
+        env:
+            PYPI_USER: '${{secrets.PYPI_USER}}'
+        steps:
+            - name: production-env-variables
+              run: | 
+                echo '$PYPI_USER'
+                echo  ' ${{github.ref}}  ${{github.ref_name}}'
+                echo ' ${{github.actor}} ${{github.action_path}} ${{github.repository}} ${{github.repository_owner}}'
+    
+    actions-functions:
+        runs-on: ubuntu-latest
+        steps:
+            - name: useing action functions
+              run: |
+                echo 'failure()'
+                echo 'success()'
+
+
+
