@@ -1,0 +1,24 @@
+name: Inputs and Outputs in Actions
+
+on:
+    workflow_dispatch:
+        inputs:
+            name: 
+                required: true
+                type: string
+            age: 
+                required: true
+                type: number
+            gender:
+                required: true
+                type: boolean
+            extras:
+                default: hello world
+                type: string
+
+
+jobs:
+    With_Input_and_Output:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo '${{inputs.name}} ${{inputs.age}} ${{inputs.extras}} ${{inputs.gender}}'
