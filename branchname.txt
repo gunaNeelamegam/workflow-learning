@@ -1,3 +1,5 @@
 # this is development branch
 
 # Testing with running with any specific event's
+
+* after mergeing only the pull request closed event will try to run which means after mergeing into main branch the pull request automatically try to close.

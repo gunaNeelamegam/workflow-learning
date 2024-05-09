@@ -1,0 +1,24 @@
+name: Working with matrix's
+
+on: 
+    push:
+        branches: 
+            - main
+            - dev
+        
+
+jobs:
+    example_matrix:
+        strategy:
+            matrix:
+            version: [10, 12, 14]
+            os: [ubuntu-latest, windows-latest]
+    
+                
+    playing_with_matrix:
+        runs-on: ubuntu-latest
+        steps: 
+        - name: "main and master push event"
+          run: echo "this is push event ${{github.event_name}}"
+
+
