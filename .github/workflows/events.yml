@@ -16,7 +16,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: "main and master push event"
-              run: echo "this is push event"
+              run: echo "this is push event ${{github.event_name}}"
 
     PullRequest:
         if: ${{github.event_name == 'pull_request'}}
